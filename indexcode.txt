@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>welcome</title>
+    <style>
+        body
+        {
+            background-color: rgb(58, 58, 15);
+            margin: 0px;
+            padding: opx;
+        }
+        .divstyle
+        {
+            text-transform: capitalize;
+            color: crimson;
+            font-weight: 900;
+            font-size: 5em;
+            font-family: cursive;
+            text-align: justify;
+            margin-top: 40px;
+            margin-left: 40%;
+
+        }
+        .box
+        {
+            
+            background-color: lightsteelblue;
+            height: 150px;
+            width: 250px;
+            margin-left:45% ;
+            margin-top: 170px;
+            color: black;
+            font-size: 2em;
+            font-weight: 400;
+            padding: 20px;
+            box-sizing: content-box;
+            text-align: center;
+        }
+        .box:hover
+        {
+            background-color: lightsalmon;
+            height: 200px;
+            width: 300px;
+            margin-left:45% ;
+            margin-top: 170px;
+            color: black;
+            font-size: 2.5em;
+            font-weight: 500;
+            padding: 20px;
+            box-sizing: content-box;
+            text-align: center;
+            transition-duration: 2s;
+        }
+    </style>
+    <script>
+        function next()
+        {
+            window.location="login.html";
+        }
+    </script>
+</head>
+<body>
+    <div class="divstyle">WELCOME !</div>
+    <div onclick="next()" class="box">Click HERE if you want to LogIn or SignUp</div>
+</body>
+</html>
