@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signupform</title>
+    <style>
+        .bodystyle
+        {
+            background-color: rgb(27, 178, 228);
+            margin: 0px;
+            padding: opx;
+        }
+        .formstyle
+        {
+            margin-left: 35%;
+            width: 600px;
+            height: 600px;
+            background-color: white;
+            margin-top: 30px;
+        }
+        h1
+        {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin-top: 70px;
+            margin-left: 10px;
+        }
+        h4
+        {
+            color: grey;
+            font-weight: lighter;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin-left: 10px;
+            margin-top: -20px;
+        }
+        #t1
+        {
+            background-color: lightgrey;
+             margin-top: 50px;
+             color: grey;
+             border: white;
+             margin-left: 60PX;
+             height: 40px;
+             border-radius: 5px;
+             width: 220px;
+        }
+        #t2
+        {
+            background-color: lightgrey;
+             margin-top: 20px;
+             color: grey;
+             border: white;
+             margin-left: 40PX;
+             height: 40px;
+             border-radius: 5px;
+             width: 220px;
+        }
+        #t3
+        {
+            background-color: lightgrey;
+             margin-top: 20px;
+             color: grey;
+             border: white;
+             margin-left: 60PX;
+             height: 40px;
+             border-radius: 5px;
+             width: 420px;
+        }
+        #t4
+        {
+            background-color: lightgrey;
+             margin-top: 20px;
+             color: grey;
+             border: white;
+             margin-left: 60PX;
+             height: 40px;
+             border-radius: 5px;
+             width: 420px;
+        }
+        #t5
+        {
+            background-color: lightgrey;
+             margin-top: 30px;
+             color: grey;
+             border: white;
+             margin-left: 60PX;
+             height: 40px;
+             border-radius: 5px;
+             width: 420px;
+        }
+        #btn
+        {
+            background-color: rgb(52, 52, 245);
+            margin-left: 60px;
+            padding: 10px;
+            border: 1px solid white;
+            color: white;
+        }
+        #p
+        {
+             
+            margin-top: 5px;
+            font-weight: bolder;
+        }
+
+    </style>
+</head>
+<body class="bodystyle">
+    <script>
+        function pswdchk()
+        {
+            if(document.getElementById("t4").value.length>0 && document.getElementById("t4").value.length<4 )
+            document.getElementById("p").innerHTML="<font color= red>WEAk</font>";
+            else
+            if (document.getElementById("t4").value.length>4 && document.getElementById("t4").value.length<6)
+            document.getElementById("p").innerHTML="<font color= blue>good</font>";
+            else 
+            
+            if(document.getElementById("t4").value.length>6 && document.getElementById("t4").value.length<8)
+            document.getElementById("p").innerHTML="<font color= green>strong</font>"
+        }
+    </script>
+        <form class="formstyle">
+            <h1>Sign Up</h1>
+            <h4>Please fill in this form to create an account!</h4>
+            <hr>
+            <input type="text" id="t1" value="FIRST NAME" required >
+            <input type="text" id="t2" value="LAST NAME">
+            <input type="text" id="t3" value="Email">
+            <input type="text" id="t4" onkeypress="pswdchk()"value="Password">
+             strength:<label id="p"></label>
+            <input type="text" id="t5" value="Confirm Password"><BR><BR>
+            <input type="checkbox" id="t6" value="" style="margin-left: 60PX;"><label style="color: gray;">I accept the</label><label style="color:blue">Terms of Use </label>
+            <label style="color: gray;">&</label><label style="color:blue">Privacy Policy </label><br><br>
+            <input type="button" id="btn" value="Sign Up">
+        </form>
+        <h5 style="color:white; text-align:center">Already have an account?<u>Login here.</u></h5>
+</body>
+</html>

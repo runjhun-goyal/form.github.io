@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogIn</title>
+    <style>
+        body
+        {
+           
+        }
+        .img
+        {
+            width: 200px;
+            height: 200px;
+            margin-left:50px ;
+            margin-top:-220px ;
+            position: absolute;
+        }
+        .formstyle
+        {
+            color: hotpink ;
+            border: black 2px;
+            margin-left: 550px;
+            margin-top: 300px;
+        }
+        .forgotstyle
+        {
+            color: rgb(218, 241, 86);
+            border: white 0px;
+            transition:duration 3s;
+        }
+        .forgotstyle:hover
+        {
+           font-size: larger; 
+           
+        }
+        #t1:hover
+        {
+            background-color: khaki;
+           width: 250px; 
+        } 
+        #t2:hover
+        {
+            background-color: khaki;
+            width: 200px;
+        }
+        #log:hover
+        {
+            background-color: lightskyblue;
+            width: 80px;
+            height: 40px;
+        } 
+        #sign:hover
+        {
+            background-color: lightskyblue;
+            width: 80px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body style="background-color:darkslategrey " >
+    
+   <script>
+    function LogIn()  
+       {
+           var user,pswd;
+           user=document.getElementById("t1").value;
+           pswd=document.getElementById("t2").value; 
+           if(user=="a@gmail.com" && pswd=="12345")
+           {
+               window.location="loginend.html";
+           } 
+           else 
+           {
+             alert("INVALID USER ID OR PASSWORD")
+           }
+       }
+    function SignUp()
+       {
+        window.location="processingsignup.html";
+       }   
+   </script> 
+   <h1 style=" color: rgb(55, 195, 219); font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;  text-align: center;"><u>LOGIN YOUR DETAILS HERE...</u></h1>
+  
+   <form class="formstyle">
+   <img src="loginimage.png" class="img">
+
+        ENTER YOUR EMAIL-ID 
+        &nbsp; 
+        <input type="email" id="t1">
+        <br><br>
+        ENTER YOUR PASSWORD 
+        &nbsp;
+        <input type="password" id="t2">
+        <br><br>
+        <input type="button" onclick="LogIn()" value="LogIn" id="log" style="margin-left: 200px;">
+        &nbsp; &nbsp; 
+       
+    
+        <input type="button" onclick="SignUp()" value="SignUp" id="sign" style="margin-left: 50px;">
+        &nbsp; &nbsp; &nbsp; 
+        <br><br>
+        <label  class="forgotstyle" style="margin-left: 320px;"><u>Forgot Password?</u></label>
+    </form>
+</body>
+</html>
